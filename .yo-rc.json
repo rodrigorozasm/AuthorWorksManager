@@ -1,0 +1,36 @@
+{
+    "generator-jhipster": {
+        "promptValues": {
+            "packageName": "cl.galea.awm",
+            "nativeLanguage": "en"
+        },
+        "jhipsterVersion": "5.7.1",
+        "applicationType": "monolith",
+        "baseName": "AuthorWorksManager",
+        "packageName": "cl.galea.awm",
+        "packageFolder": "cl/galea/awm",
+        "serverPort": "8080",
+        "authenticationType": "jwt",
+        "cacheProvider": "ehcache",
+        "enableHibernateCache": true,
+        "websocket": false,
+        "databaseType": "sql",
+        "devDatabaseType": "mysql",
+        "prodDatabaseType": "mysql",
+        "searchEngine": false,
+        "messageBroker": false,
+        "serviceDiscoveryType": false,
+        "buildTool": "maven",
+        "enableSwaggerCodegen": false,
+        "jwtSecretKey": "YjY2NzdjNjY2OWNiYzk2MGRhMjIyMTI5NGUxMzMyN2MyNGUyNzRhZmZjNzczOTM4ZDI1OWUyZDExMGUxZWFiMzBkYmI4NjBkZThkMWFhZDQ0OWY1NzdhY2Q0MzgyOTc2ZDNlOTVkYmNlYTMwNzhkZTg2NzQ2ZWNhNGUxYmQ3YzI=",
+        "clientFramework": "angularX",
+        "useSass": false,
+        "clientPackageManager": "npm",
+        "testFrameworks": [],
+        "jhiPrefix": "jhi",
+        "otherModules": [],
+        "enableTranslation": true,
+        "nativeLanguage": "en",
+        "languages": ["en", "es"]
+    }
+}
