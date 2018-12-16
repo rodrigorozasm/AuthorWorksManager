@@ -30,6 +30,10 @@
                 <constraints nullable="true" />
             </column>
 
+            <column name="formatted_complet_name" type="varchar(200)">
+                <constraints nullable="true" />
+            </column>
+
             <column name="birth_date" type="date">
                 <constraints nullable="true" />
             </column>

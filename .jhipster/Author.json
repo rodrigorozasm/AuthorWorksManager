@@ -19,6 +19,14 @@
             "fieldValidateRulesMaxlength": 100
         },
         {
+            "fieldName": "formattedCompletName",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "maxlength"
+            ],
+            "fieldValidateRulesMaxlength": 200
+        },
+        {
             "fieldName": "birthDate",
             "fieldType": "LocalDate"
         },
@@ -36,7 +44,7 @@
             "relationshipType": "many-to-one",
             "relationshipName": "country",
             "otherEntityName": "country",
-            "otherEntityField": "nationality"
+            "otherEntityField": "countryName"
         }
     ],
     "changelogDate": "20181216050140",

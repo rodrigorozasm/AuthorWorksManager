@@ -26,7 +26,7 @@
                 <constraints nullable="false" />
             </column>
 
-            <column name="work_abstract" type="varchar(255)">
+            <column name="work_abstract" type="varchar(3000)">
                 <constraints nullable="true" />
             </column>
 

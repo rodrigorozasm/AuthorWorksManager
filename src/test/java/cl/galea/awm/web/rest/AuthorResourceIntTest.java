@@ -49,6 +49,9 @@ public class AuthorResourceIntTest {
     private static final String DEFAULT_LAST_NAMES = "AAAAAAAAAA";
     private static final String UPDATED_LAST_NAMES = "BBBBBBBBBB";
 
+    private static final String DEFAULT_FORMATTED_COMPLET_NAME = "AAAAAAAAAA";
+    private static final String UPDATED_FORMATTED_COMPLET_NAME = "BBBBBBBBBB";
+
     private static final LocalDate DEFAULT_BIRTH_DATE = LocalDate.ofEpochDay(0L);
     private static final LocalDate UPDATED_BIRTH_DATE = LocalDate.now(ZoneId.systemDefault());
 
@@ -99,6 +102,7 @@ public class AuthorResourceIntTest {
         Author author = new Author()
             .names(DEFAULT_NAMES)
             .lastNames(DEFAULT_LAST_NAMES)
+            .formattedCompletName(DEFAULT_FORMATTED_COMPLET_NAME)
             .birthDate(DEFAULT_BIRTH_DATE)
             .gender(DEFAULT_GENDER);
         return author;
@@ -126,6 +130,7 @@ public class AuthorResourceIntTest {
         Author testAuthor = authorList.get(authorList.size() - 1);
         assertThat(testAuthor.getNames()).isEqualTo(DEFAULT_NAMES);
         assertThat(testAuthor.getLastNames()).isEqualTo(DEFAULT_LAST_NAMES);
+        assertThat(testAuthor.getFormattedCompletName()).isEqualTo(DEFAULT_FORMATTED_COMPLET_NAME);
         assertThat(testAuthor.getBirthDate()).isEqualTo(DEFAULT_BIRTH_DATE);
         assertThat(testAuthor.getGender()).isEqualTo(DEFAULT_GENDER);
     }
@@ -198,6 +203,7 @@ public class AuthorResourceIntTest {
             .andExpect(jsonPath("$.[*].id").value(hasItem(author.getId().intValue())))
             .andExpect(jsonPath("$.[*].names").value(hasItem(DEFAULT_NAMES.toString())))
             .andExpect(jsonPath("$.[*].lastNames").value(hasItem(DEFAULT_LAST_NAMES.toString())))
+            .andExpect(jsonPath("$.[*].formattedCompletName").value(hasItem(DEFAULT_FORMATTED_COMPLET_NAME.toString())))
             .andExpect(jsonPath("$.[*].birthDate").value(hasItem(DEFAULT_BIRTH_DATE.toString())))
             .andExpect(jsonPath("$.[*].gender").value(hasItem(DEFAULT_GENDER.toString())));
     }
@@ -215,6 +221,7 @@ public class AuthorResourceIntTest {
             .andExpect(jsonPath("$.id").value(author.getId().intValue()))
             .andExpect(jsonPath("$.names").value(DEFAULT_NAMES.toString()))
             .andExpect(jsonPath("$.lastNames").value(DEFAULT_LAST_NAMES.toString()))
+            .andExpect(jsonPath("$.formattedCompletName").value(DEFAULT_FORMATTED_COMPLET_NAME.toString()))
             .andExpect(jsonPath("$.birthDate").value(DEFAULT_BIRTH_DATE.toString()))
             .andExpect(jsonPath("$.gender").value(DEFAULT_GENDER.toString()));
     }
@@ -242,6 +249,7 @@ public class AuthorResourceIntTest {
         updatedAuthor
             .names(UPDATED_NAMES)
             .lastNames(UPDATED_LAST_NAMES)
+            .formattedCompletName(UPDATED_FORMATTED_COMPLET_NAME)
             .birthDate(UPDATED_BIRTH_DATE)
             .gender(UPDATED_GENDER);
 
@@ -256,6 +264,7 @@ public class AuthorResourceIntTest {
         Author testAuthor = authorList.get(authorList.size() - 1);
         assertThat(testAuthor.getNames()).isEqualTo(UPDATED_NAMES);
         assertThat(testAuthor.getLastNames()).isEqualTo(UPDATED_LAST_NAMES);
+        assertThat(testAuthor.getFormattedCompletName()).isEqualTo(UPDATED_FORMATTED_COMPLET_NAME);
         assertThat(testAuthor.getBirthDate()).isEqualTo(UPDATED_BIRTH_DATE);
         assertThat(testAuthor.getGender()).isEqualTo(UPDATED_GENDER);
     }

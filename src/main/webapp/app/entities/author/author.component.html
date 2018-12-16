@@ -17,6 +17,7 @@
             <th><span jhiTranslate="global.field.id">ID</span></th>
             <th><span jhiTranslate="authorWorksManagerApp.author.names">Names</span></th>
             <th><span jhiTranslate="authorWorksManagerApp.author.lastNames">Last Names</span></th>
+            <th><span jhiTranslate="authorWorksManagerApp.author.formattedCompletName">Formatted Complet Name</span></th>
             <th><span jhiTranslate="authorWorksManagerApp.author.birthDate">Birth Date</span></th>
             <th><span jhiTranslate="authorWorksManagerApp.author.gender">Gender</span></th>
             <th><span jhiTranslate="authorWorksManagerApp.author.country">Country</span></th>
@@ -28,11 +29,12 @@
                 <td><a [routerLink]="['/author', author.id, 'view' ]">{{author.id}}</a></td>
                 <td>{{author.names}}</td>
                 <td>{{author.lastNames}}</td>
+                <td>{{author.formattedCompletName}}</td>
                 <td>{{author.birthDate | date:'mediumDate'}}</td>
                 <td jhiTranslate="{{'authorWorksManagerApp.Gender.' + author.gender}}">{{author.gender}}</td>
                 <td>
                     <div *ngIf="author.country">
-                        <a [routerLink]="['../country', author.country?.id, 'view' ]" >{{author.country?.nationality}}</a>
+                        <a [routerLink]="['../country', author.country?.id, 'view' ]" >{{author.country?.countryName}}</a>
                     </div>
                 </td>
                 <td class="text-right">

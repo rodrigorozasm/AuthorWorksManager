@@ -14,7 +14,7 @@
                 <dt><span jhiTranslate="authorWorksManagerApp.authorWork.author">Author</span></dt>
                 <dd>
                     <div *ngIf="authorWork.author">
-                        <a [routerLink]="['/author', authorWork.author?.id, 'view']">{{authorWork.author?.completeName}}</a>
+                        <a [routerLink]="['/author', authorWork.author?.id, 'view']">{{authorWork.author?.formattedCompletName}}</a>
                     </div>
                 </dd>
             </dl>

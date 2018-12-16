@@ -12,7 +12,7 @@
             "relationshipType": "many-to-one",
             "relationshipName": "author",
             "otherEntityName": "author",
-            "otherEntityField": "completeName"
+            "otherEntityField": "formattedCompletName"
         }
     ],
     "changelogDate": "20181216050143",

@@ -1,6 +1,7 @@
 entity Author {
 	names String required maxlength(100),
-    lastNames String maxlength(100), 
+    lastNames String maxlength(100),
+    formattedCompletName String maxlength(200),
     birthDate LocalDate,
     gender Gender required
 }
@@ -15,7 +16,7 @@ entity Country {
 
 entity Work {
 	workName String required maxlength(200),
-    workAbstract String,
+    workAbstract String maxlength(3000),
     workType WorkType required
 }
 
@@ -27,10 +28,10 @@ enum WorkType {
 }
 
 relationship OneToMany {
-	Country to Author{Country(nationality)}
+	Country to Author{Country(countryName)}
 }
 
 relationship ManyToOne {
   AuthorWork{work(workName)} to Work,
-  AuthorWork{author(completeName)} to Author
+  AuthorWork{author(formattedCompletName)} to Author
 }

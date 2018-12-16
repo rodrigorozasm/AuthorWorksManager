@@ -12,7 +12,11 @@
         },
         {
             "fieldName": "workAbstract",
-            "fieldType": "String"
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "maxlength"
+            ],
+            "fieldValidateRulesMaxlength": 3000
         },
         {
             "fieldName": "workType",

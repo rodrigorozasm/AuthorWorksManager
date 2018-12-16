@@ -30,7 +30,8 @@ public class Work implements Serializable {
     @Column(name = "work_name", length = 200, nullable = false)
     private String workName;
 
-    @Column(name = "work_abstract")
+    @Size(max = 3000)
+    @Column(name = "work_abstract", length = 3000)
     private String workAbstract;
 
     @NotNull

@@ -17,6 +17,7 @@
             },
             "names": "Names",
             "lastNames": "Last Names",
+            "formattedCompletName": "Formatted Complet Name",
             "birthDate": "Birth Date",
             "gender": "Gender",
             "country": "Country"

@@ -25,7 +25,7 @@ describe('Service Tests', () => {
             httpMock = injector.get(HttpTestingController);
             currentDate = moment();
 
-            elemDefault = new Author(0, 'AAAAAAA', 'AAAAAAA', currentDate, Gender.MALE);
+            elemDefault = new Author(0, 'AAAAAAA', 'AAAAAAA', 'AAAAAAA', currentDate, Gender.MALE);
         });
 
         describe('Service methods', async () => {
@@ -72,6 +72,7 @@ describe('Service Tests', () => {
                     {
                         names: 'BBBBBB',
                         lastNames: 'BBBBBB',
+                        formattedCompletName: 'BBBBBB',
                         birthDate: currentDate.format(DATE_FORMAT),
                         gender: 'BBBBBB'
                     },
@@ -97,6 +98,7 @@ describe('Service Tests', () => {
                     {
                         names: 'BBBBBB',
                         lastNames: 'BBBBBB',
+                        formattedCompletName: 'BBBBBB',
                         birthDate: currentDate.format(DATE_FORMAT),
                         gender: 'BBBBBB'
                     },

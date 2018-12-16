@@ -36,6 +36,10 @@ public class Author implements Serializable {
     @Column(name = "last_names", length = 100)
     private String lastNames;
 
+    @Size(max = 200)
+    @Column(name = "formatted_complet_name", length = 200)
+    private String formattedCompletName;
+
     @Column(name = "birth_date")
     private LocalDate birthDate;
 
@@ -81,6 +85,19 @@ public class Author implements Serializable {
 
     public void setLastNames(String lastNames) {
         this.lastNames = lastNames;
+    }
+
+    public String getFormattedCompletName() {
+        return formattedCompletName;
+    }
+
+    public Author formattedCompletName(String formattedCompletName) {
+        this.formattedCompletName = formattedCompletName;
+        return this;
+    }
+
+    public void setFormattedCompletName(String formattedCompletName) {
+        this.formattedCompletName = formattedCompletName;
     }
 
     public LocalDate getBirthDate() {
@@ -149,6 +166,7 @@ public class Author implements Serializable {
             "id=" + getId() +
             ", names='" + getNames() + "'" +
             ", lastNames='" + getLastNames() + "'" +
+            ", formattedCompletName='" + getFormattedCompletName() + "'" +
             ", birthDate='" + getBirthDate() + "'" +
             ", gender='" + getGender() + "'" +
             "}";
