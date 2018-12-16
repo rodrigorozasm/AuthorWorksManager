@@ -7,6 +7,10 @@
             "jhipster-needle-menu-add-element": "JHipster will add additional menu entries here (do not translate!)",
             "entities": {
                 "main": "Entidades",
+                "author": "Author",
+                "country": "Country",
+                "work": "Work",
+                "authorWork": "Author Work",
                 "jhipster-needle-menu-add-entry": "JHipster will add additional entities here (do not translate!)"
             },
             "account": {

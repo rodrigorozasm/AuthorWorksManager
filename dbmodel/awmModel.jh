@@ -1,0 +1,36 @@
+entity Author {
+	names String required maxlength(100),
+    lastNames String maxlength(100), 
+    birthDate LocalDate,
+    gender Gender required
+}
+
+enum Gender {
+    MALE, FEMALE, UNDEF
+}
+
+entity Country {
+	countryName String required maxlength(40)
+}
+
+entity Work {
+	workName String required maxlength(200),
+    workAbstract String,
+    workType WorkType required
+}
+
+entity AuthorWork {
+}
+
+enum WorkType {
+    BOOK, THESIS, ARTICLE, OTHER
+}
+
+relationship OneToMany {
+	Country to Author{Country(nationality)}
+}
+
+relationship ManyToOne {
+  AuthorWork{work(workName)} to Work,
+  AuthorWork{author(completeName)} to Author
+}

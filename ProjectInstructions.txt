@@ -1,0 +1,92 @@
+1. Install Node.JS
+
+2. Open the NodeJS console, and execute the commands:
+
+	Update npm:			npm install -g npm
+	(actualizar npm)
+	
+	(optional)			npm install -g yo
+	If you want to use the JHipster Marketplace, install Yeoman: 
+	
+	Install JHipster: npm install -g generator-jhipster
+
+3. In Visual Studio Code, clone your project's Git repository
+	(ref: https://lemoncode.net/lemoncode-blog/2017/12/12/git-y-visual-studio-code)
+
+4. In the project's path, proceed with the Git's user configuration:
+	R:\nodejs>cd R:\repos\AuthorWorksManager
+	
+	R:\repos\AuthorWorksManager>git config --global user.email "rodrigo.rozasm@gmail.com"
+	R:\repos\AuthorWorksManager>git config --global user.name "Rodrigo Rozas Moser"
+
+5. Open the OS console in the project's path, and execute Jhipster's project creation:
+	
+	R:\nodejs>cd R:\repos\AuthorWorksManager
+	R:\repos\AuthorWorksManager>jhipster
+
+6. Jhipster will open show some questions which you need complete for your project's creation:
+
+	? Which *type* of application would you like to create? Monolithic application (recommended for simple projects)
+	? What is the base name of your application? AuthorWorksManager
+	? What is your default Java package name? cl.galea.awm
+	? Do you want to use the JHipster Registry to configure, monitor and scale your application? No
+	? Which *type* of authentication would you like to use? JWT authentication (stateless, with a token)
+	? Which *type* of database would you like to use? SQL (H2, MySQL, MariaDB, PostgreSQL, Oracle, MSSQL)
+	? Which *production* database would you like to use? MySQL
+	? Which *development* database would you like to use? MySQL
+	? Do you want to use the Spring cache abstraction? Yes, with the Ehcache implementation (local cache, for a single node)
+
+
+	? Do you want to use Hibernate 2nd level cache? Yes
+	? Would you like to use Maven or Gradle for building the backend? Maven
+	? Which other technologies would you like to use?
+	? Which *Framework* would you like to use for the client? Angular
+	? Would you like to enable *SASS* stylesheet preprocessor? No
+	? Would you like to enable internationalization support? Yes
+	? Please choose the native language of the application English
+	? Please choose additional languages to install Spanish
+	? Besides JUnit and Jest, which testing frameworks would you like to use?
+	? Would you like to install other generators from the JHipster Marketplace? No
+
+6. The process will start with the projects creation.
+
+7. When the project's creation is finished, proced with the Git's commit.
+
+	R:\repos\AuthorWorksManager>git init
+	R:\repos\AuthorWorksManager>git add .
+	R:\repos\AuthorWorksManager>git commit -m "Empty Jhipster project"
+	(the -m parameter is for your commit's message)
+	
+	R:\repos\AuthorWorksManager>git push
+	
+	With "git push" command, the console should ask you for your username and password used on Git's external repository.
+	After the account configuration is validated, you should watch a console output like this:
+	
+	R:\repos\AuthorWorksManager>git push
+	Enumerating objects: 524, done.
+	Counting objects: 100% (524/524), done.
+	Delta compression using up to 8 threads
+	Compressing objects: 100% (498/498), done.
+	Writing objects: 100% (524/524), 963.56 KiB | 3.39 MiB/s, done.
+	Total 524 (delta 62), reused 0 (delta 0)
+	remote: Resolving deltas: 100% (62/62), done.
+	To https://github.com/rodrigorozasm/AuthorWorksManager.git
+	 * [new branch]      master -> master
+
+	R:\repos\AuthorWorksManager>
+
+
+II. Entities creation:
+======================
+
+1. Proceed with the creation of a file with the application entities, following the rules displayed in the URL: https://www.jhipster.tech/jdl/
+	You can use JDL Studio to proceed with this file creation online: https://start.jhipster.tech/jdl-studio/
+
+2. Create a file with the contents of the entities model, and put it in a path asequible from the console.
+
+3. Create the code entities from the file with the command:
+
+	jhipster import-jdl ${your-jdl-file.jdl}
+	
+	Ex: R:\repos\AuthorWorksManager>jhipster import-jdl dbmodel\awmModel.jh
+	

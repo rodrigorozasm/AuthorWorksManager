@@ -1,0 +1,35 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="authorWork">
+            <h2><span jhiTranslate="authorWorksManagerApp.authorWork.detail.title">Author Work</span> {{authorWork.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="authorWorksManagerApp.authorWork.work">Work</span></dt>
+                <dd>
+                    <div *ngIf="authorWork.work">
+                        <a [routerLink]="['/work', authorWork.work?.id, 'view']">{{authorWork.work?.workName}}</a>
+                    </div>
+                </dd>
+                <dt><span jhiTranslate="authorWorksManagerApp.authorWork.author">Author</span></dt>
+                <dd>
+                    <div *ngIf="authorWork.author">
+                        <a [routerLink]="['/author', authorWork.author?.id, 'view']">{{authorWork.author?.completeName}}</a>
+                    </div>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/author-work', authorWork.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

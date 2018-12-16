@@ -1,0 +1,22 @@
+{
+    "authorWorksManagerApp": {
+        "authorWork": {
+            "home": {
+                "title": "Author Works",
+                "createLabel": "Create a new Author Work",
+                "createOrEditLabel": "Create or edit a Author Work"
+            },
+            "created": "A new Author Work is created with identifier {{ param }}",
+            "updated": "A Author Work is updated with identifier {{ param }}",
+            "deleted": "A Author Work is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Author Work {{ id }}?"
+            },
+            "detail": {
+                "title": "Author Work"
+            },
+            "work": "Work",
+            "author": "Author"
+        }
+    }
+}

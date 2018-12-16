@@ -1,0 +1,36 @@
+{
+    "name": "Work",
+    "fields": [
+        {
+            "fieldName": "workName",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required",
+                "maxlength"
+            ],
+            "fieldValidateRulesMaxlength": 200
+        },
+        {
+            "fieldName": "workAbstract",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "workType",
+            "fieldType": "WorkType",
+            "fieldValues": "BOOK,THESIS,ARTICLE,OTHER",
+            "fieldValidateRules": [
+                "required"
+            ]
+        }
+    ],
+    "relationships": [],
+    "changelogDate": "20181216050142",
+    "entityTableName": "work",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

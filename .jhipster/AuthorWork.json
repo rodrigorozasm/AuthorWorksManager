@@ -1,0 +1,27 @@
+{
+    "name": "AuthorWork",
+    "fields": [],
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "relationshipName": "work",
+            "otherEntityName": "work",
+            "otherEntityField": "workName"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "relationshipName": "author",
+            "otherEntityName": "author",
+            "otherEntityField": "completeName"
+        }
+    ],
+    "changelogDate": "20181216050143",
+    "entityTableName": "author_work",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}
